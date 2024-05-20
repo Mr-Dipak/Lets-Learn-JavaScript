@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Chai Aur Code</h2>
+    <button id="stop">Stop</button>
+    
+</body>
+<script>
+
+    // document.querySelector('button').addEventListener('click',function(e){
+        
+    //     setTimeout(function(){
+        
+    //         console.log('dipak')
+    //     },2000)
+    // })
+
+    function textChange(){
+        document.querySelector('h2').innerHTML = 'Best JavaScript Learner!'
+    }
+
+    const changeMe = setTimeout(textChange,5000);
+
+    document.getElementById('stop').addEventListener('click',function(){
+
+        clearTimeout(changeMe)
+        console.log('stop button clicked!')
+
+    })
+
+    
+ 
+
+</script>
+</html>

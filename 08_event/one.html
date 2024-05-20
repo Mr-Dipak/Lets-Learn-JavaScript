@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>htnml Events </title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        
+        </ul>
+   </div>
+   <div>
+    <button>click me!</button>
+   </div>
+</body>
+<script>
+
+    //*******************Second Method of Event*****************
+    // document.getElementById('owl').onclick = ()=>{
+    //     alert('owl clicked')
+    // }
+
+    // ***************Learn***********************************
+    //type, timestamp, defaultPrevented
+    //target, toElement, srcElement
+    //clientX, clientY, screenX, screenY
+    //altKey, ctrlKey,shiftKey,keyCode
+
+
+    // attachEvent()
+
+    // **********************Propagation Phases*********************************
+
+    // document.getElementById('images').addEventListener('click',function (){
+    //     console.log('clicked inside the ul');
+    //     console.log(this)
+    // },false);
+    // // document.getElementById('owl').addEventListener('click',function (){
+    // //     console.log('owl clicked')
+    // // },true)//capturing propagation Top to button hirarchy NOTE: by default progation is bubbling
+
+    // document.getElementById('owl').addEventListener('click',function (e){
+    //     console.log('owl clicked')
+    //     e.stopPropagation()
+    // },false)//bubbling propagation button to tap toward the parent NODE and parent function auto envoked
+
+    // const button = document.querySelector('button');
+    // button.addEventListener('click',e=>{
+    //     console.log(this.innerText)
+    // }
+    // )
+
+    // document.querySelector('#google').addEventListener('click',function(e){
+    //     console.log("Google clicked!");
+    //     e.stopPropagation();
+    //     e.preventDefault();
+
+    // },false);
+
+
+    //remove element
+
+    document.querySelector('#images').addEventListener('click',function(e){
+        if(e.target.tagName ==='IMG'){
+            const img = (e.target.parentNode);
+            // img.remove();
+            img.parentNode.removeChild(img)
+        }
+
+    },false);
+
+    
+    
+
+
+</script>
+</html>

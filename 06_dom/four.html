@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body{
+            background-color:rgba(0, 0, 0, 0.774);
+            color:white;
+
+        }
+    </style>
+</head>
+<body>
+    <ul class="language">
+        <li>javaScript</li>
+    </ul>
+    <script>
+        function addLanguage(langName,className,id){
+
+            const list = document.createElement('li');
+            const listText = document.createTextNode(langName);
+            list.appendChild(listText);
+            list.className = className;
+            list.id = id;
+            document.querySelector('ul').appendChild(list);
+            
+        }
+
+        addLanguage("python","python","puthon");
+        addLanguage("Java","java","java");
+
+        // Optimize way to add Element
+
+        function addOptiLanguage(langName){
+            const li = document.createElement('li');
+            li.appendChild(document.createTextNode(langName));
+            document.querySelector('.language').appendChild(li);
+        }
+
+        addOptiLanguage('CPP');
+        addLanguage('C')
+        
+        //Edit
+        const secondLang = document.querySelector('li:nth-child(2)');
+        console.log(secondLang);
+        // secondLang.innerHTML = "Mojo";
+        const newLi = document.createElement('li');
+        newLi.textContent = "Mojo";
+        secondLang.replaceWith(newLi);
+
+        const firstLang = document.querySelector('li:first-child');
+        firstLang.outerHTML = "<li>TypeScript</li>";
+
+        //remove
+        const lastLang = document.querySelector('li:last-child').remove();
+    </script>
+    
+</body>
+</html>

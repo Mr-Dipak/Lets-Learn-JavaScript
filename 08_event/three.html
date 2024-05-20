@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Chai Aur Code</h2>
+    <button id="start">start</button>
+    <button id="stop">Stop</button>
+    
+</body>
+<script>
+    function sayDipak (str){
+        console.log(str,Date.now());
+    }
+
+    let clearID;
+    document.querySelector('#start').addEventListener('click',e=>{
+        console.log('start button clicked! ')
+        clearID = setInterval(sayDipak,1000,'hi')
+    })
+
+    document.getElementById('stop').addEventListener('click',e=>{
+        console.log('stop button clicked! ')
+        clearInterval(clearID);
+    });
+
+
+</script>
+</html>

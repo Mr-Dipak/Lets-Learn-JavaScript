@@ -1,0 +1,16 @@
+javascript Execution context
+
+
+*****************This********************************
+
+[{}] => global Execution context // in node environment
+[window] => global Execution context // in browser's
+
+
+Functional Execution context
+Eval Execution context // property of global Object
+
+[{}] => memory creation phase
+    =>Execution phase
+
+
