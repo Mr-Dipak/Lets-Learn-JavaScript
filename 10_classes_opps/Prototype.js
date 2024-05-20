@@ -1,9 +1,3 @@
-let myName = "dipak     ";
-
-console.log(myName.trim().length)
-String.prototype.trueLenght = (value)=>{
-    return value.trim();
-}
 
 let myHeros = ["thor",'spiderman'];
 
@@ -55,6 +49,23 @@ Teacher.__proto__ = User;
 
 Object.setPrototypeOf(TeachingSupport,Teacher);
 console.log(TASupport);
+
+// custome time method
+
+String.prototype.trueLength = function (){
+    return this.trim().length;
+    // console.log(this.trim().length)
+}
+
+let myName = "dipak     ";
+console.log(myName.trueLength());
+
+// call, bind and apply - this point towrds the current execution context.
+
+
+
+
+
 
 
 
