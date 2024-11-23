@@ -91,6 +91,8 @@ const course = {
 const { courseInstructor: instructor } = course;
 console.log(instructor);
 
+console.log(users.hasOwnProperty('name'));
+
 
 
 

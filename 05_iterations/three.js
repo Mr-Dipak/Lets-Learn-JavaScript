@@ -20,13 +20,13 @@ for (const great of greatings) {
 
 //Maps
 
-const contorys = new Map();
+const contries = new Map();
 
-contorys.set("IN","India");
-contorys.set("USA","United State of America");
-contorys.set("Uk","United Kindom");
-contorys.set("CH","Chaina");
-contorys.set("PK","Pakistan");
+contries.set("IN","India");
+contries.set("USA","United State of America");
+contries.set("Uk","United Kindom");
+contries.set("CH","Chaina");
+contries.set("PK","Pakistan");
 
 for (const [key, value] of contorys) {
     console.log(`Key is ${key} and value is ${value}`)

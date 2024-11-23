@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="bg-black">
+        <h1 id="heading" class="heading blue">Dom Learning on Chai aur code</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, reiciendis.</p>
+        <p>one </p>
+
+        <p> two</p>
+
+        <p>three</p>
+        <p>four</p>
+        <p>five</p>
+    </div>
+    <button id="button">click me</button>
+    
+</body>
+<script>
+
+    
+
+    const heading = document.getElementById('heading');
+    const button = document.getElementById('button');
+    const NodeList = document.querySelectorAll('p');
+    console.log(NodeList);
+    const pElements = Array.from(NodeList);
+    function getColor(){
+        const red = Math.floor(Math.random() * 256);
+        const green = Math.floor(Math.random() * 256);
+        const blue = Math.floor(Math.random() * 256);
+        return rgb = `rgb(${red},${green},${blue})`;
+    }
+    button.addEventListener('click',(e)=>{
+        pElements.forEach(element=>{
+            element.style.backgroundColor = getColor();
+        })
+    })
+
+
+</script>
+</html>

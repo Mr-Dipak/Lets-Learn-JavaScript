@@ -1,8 +1,9 @@
-const buttons = document.querySelectorAll('.button');
+const buttons = document.getElementsByClassName('button');
+const buttonsArr = Array.from(buttons);
 
 const body = document.querySelector('body');
 let color;
-buttons.forEach(button=>{
+buttonsArr.forEach(button=>{
   button.addEventListener('click',(e)=>{
 
     switch(e.target.id){

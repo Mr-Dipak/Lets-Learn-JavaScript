@@ -56,3 +56,43 @@
  })//implicit return
 
 console.log( addTwo());
+
+const sayHi=()=>{
+   const hi = "hi"
+   console.log(this.hi);
+}
+
+sayHi();
+
+const person = {
+   name: "dipak",
+   callSayHello (){
+      const sayHi = ()=>{
+         console.log(`Hello ${this.name}`);
+      };
+      sayHi();
+   }
+}
+person.callSayHello();
+
+const student = {
+   name: "dipak",
+   callSayHello (){
+      console.log(this.name);
+   }
+}
+student.callSayHello();
+
+function checkArgs(){
+   // console.log(arguments.length);
+   return arrowCheckArgs = ()=>{
+      console.log();
+   }
+   
+}
+
+const arrowFunction = checkArgs('hello',1);
+arrowFunction();
+
+
+const arr = [1,2,3,5];

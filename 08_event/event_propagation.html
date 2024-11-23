@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ddd7d7;
+        }
+        .child{
+            width: 100px;
+            height: 100px;
+            background-color: #333;
+            margin: 10px;
+        }
+        .child:nth-child(1){
+            background-color: red;
+        }
+        .child:nth-child(2){
+            background-color: green;
+        }
+        .child:nth-child(3){
+            background-color: blue;
+        }
+        .child:nth-child(4){
+            background-color: yellow;
+        }
+        .child:nth-child(5){
+            background-color: pink;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="parent">
+        <div><div id="red" class="box child"></div></div>
+        <div><div id="green" class="box child"></div></div>
+        <div><div id="blue" class="box child"></div></div>
+        
+        
+        
+        <div id="yellow" class="box child"></div>
+        <div id="pink" class="box child"></div>
+       
+       
+        
+       
+    
+    </div>
+    
+    <script>
+        const parent = document.querySelector('.parent');
+        parent.addEventListener('click',e=>{
+            e.preventDefault();
+            const remove = e.target.parentNode;
+            console.log(remove)
+            remove.removeChild(e.target);
+        })
+        parent.addEventListener('click',e=>{
+            console.log('parent is clicked');
+            alert('parent is clicked');
+        },true)
+    </script>
+</body>
+</html>

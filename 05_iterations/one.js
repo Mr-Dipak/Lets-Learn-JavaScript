@@ -48,3 +48,11 @@ for (let i = 1; i <=20; i++) {
     console.log(`value of 'i' is ${i}`);
 }
 
+
+
+for(let i =0; i<10; i++){
+    if(i==5 || i==6){
+        continue;
+    }
+    console.log(i);
+};

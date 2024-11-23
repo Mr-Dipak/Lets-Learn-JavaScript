@@ -41,3 +41,4 @@ let result = handelObj({
 console.log(result);
 
 const newArr = ["dipak"]
+

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input class="" id="text" type="text">
+    <br>
+    <textarea name="" id="result"></textarea>
+    <button>click me</button>
+    <script>
+       
+       
+        const result = document.getElementById('result');
+        const button = document.querySelector('button');
+        button.addEventListener('click',e=>{
+            const text = document.getElementById('text').value;
+            result.value += ` ${text}`;});
+    </script>  
+</body>
+</html>
